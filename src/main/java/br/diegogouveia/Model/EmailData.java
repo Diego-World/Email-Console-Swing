@@ -17,8 +17,8 @@ public class EmailData {
         return instance;
     }
 
-    public String getRecipicent() {
-        return recipicent;
+    public void setEmailContent(String emailContent) {
+        this.emailContent = emailContent;
     }
 
     public void setRecipicent(String recipicent) {
@@ -29,7 +29,15 @@ public class EmailData {
         this.subject = subject;
     }
 
-    public void setEmailContent(String emailContent) {
-        this.emailContent = emailContent;
+    public String getRecipicent() {
+        return recipicent;
+    }
+
+    public String getSubject() {
+        return subject;
+    }
+
+    public String getEmailContent() {
+        return emailContent;
     }
 }
