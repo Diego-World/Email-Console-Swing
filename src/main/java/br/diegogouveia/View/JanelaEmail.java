@@ -21,16 +21,14 @@ public class JanelaEmail extends JFrame {
         WriteEmailDisplay writeEmailDisplay = new WriteEmailDisplay();
         writeEmailDisplay.setPreferredSize(new Dimension(400,200));
 
-
         SubjectRecipientDisplay subjectRecipientDisplay = new SubjectRecipientDisplay();
         subjectRecipientDisplay.setPreferredSize(new Dimension(400,111));
 
-        SendButton sendButton = new SendButton();
-
+        SendButton sendButton = new SendButton(subjectRecipientDisplay, writeEmailDisplay);
 
         add(sendButton, BorderLayout.SOUTH);
-        add(subjectRecipientDisplay,BorderLayout.NORTH);
-        add(writeEmailDisplay,BorderLayout.CENTER);
+        add(subjectRecipientDisplay, BorderLayout.NORTH);
+        add(writeEmailDisplay, BorderLayout.CENTER);
     }
 
     public static void main(String[] args) {
