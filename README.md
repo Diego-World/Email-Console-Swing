@@ -20,4 +20,4 @@ Só é preciso executar o programa, preencher o destinatário, assunto e o corpo
 
 Feito isso clique no botão enviar e caso as informações sejam válidas o e-mail será enviado!
 
-<img src="https://freeimage.host/i/JEI93TQ"/>
+![Imagem]((https://freeimage.host/i/JEI93TQ))
