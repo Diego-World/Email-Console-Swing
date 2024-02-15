@@ -65,8 +65,4 @@ public class SubjectRecipientDisplay extends JPanel {
     public String getSubjectField() {
         return this.subjectField.getText();
     }
-
-    /* public String getEmailContentField() {
-        return this.emailContentField.getText();
-    } */
 }

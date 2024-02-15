@@ -1,14 +1,11 @@
 package br.diegogouveia.View;
 
 import br.diegogouveia.Model.EmailData;
+import br.diegogouveia.Service.SendEmailService;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
-// A ação principal é o clique no botão enviar!
-
-// Quando o botão é clicado os campos JTextField serão acessados e o texto armazenados nas variáveis EmailData.
 
 public class SendButton extends JButton implements ActionListener {
 private SubjectRecipientDisplay subjectRecipientDisplay;
@@ -27,5 +24,13 @@ private WriteEmailDisplay writeEmailDisplay;
         emailData.setRecipicent(subjectRecipientDisplay.getRecipientField());
         emailData.setEmailContent(writeEmailDisplay.getEmailContent());
         emailData.setSubject(subjectRecipientDisplay.getSubjectField());
+
+        if(SendEmailService.sendEmail(emailData.getRecipicent(),
+                emailData.getSubject(), emailData.getEmailContent())){
+            JOptionPane.showMessageDialog(writeEmailDisplay,"O e-mail foi enviado");
+            writeEmailDisplay.setText("");
+        }else{
+            JOptionPane.showMessageDialog(writeEmailDisplay,"O e-mail não foi enviado");
+        }
     }
 }
